@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace ContactManager
 {
@@ -13,7 +8,7 @@ namespace ContactManager
         {
             InitializeComponent();
 
-            MainPage = new ContactManager.MainPage();
+            MainPage = new NavigationPage(new Pages.Contacts());
         }
 
         protected override void OnStart()
