@@ -4,8 +4,21 @@
              xmlns:local="clr-namespace:ContactManager"
              x:Class="ContactManager.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ListView x:Name="ContactList" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="#FFFFFFF" Padding="5"
+                        Orientation="Vertical" VerticalOptions="FillAndExpand">
+                        <Label Text="{Binding Name}"
+                                TextColor="#555555" />
+                        <Label Text="{Binding PhoneNumber}"
+                                TextColor="#999999" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
 
 </ContentPage>

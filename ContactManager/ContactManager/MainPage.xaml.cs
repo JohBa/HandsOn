@@ -12,6 +12,16 @@ namespace ContactManager
         public MainPage()
         {
             InitializeComponent();
+            InitList();
+        }
+
+        private void InitList()
+        {
+            var contacts = new List<Contact>();
+            contacts.Add(new Contact {Name = "foo", PhoneNumber = "fooweg"});
+            contacts.Add(new Contact { Name = "foobar", PhoneNumber = "foostraße" });
+            contacts.Add(new Contact { Name = "foobarz", PhoneNumber = "Foo Avenue 42" });
+            ContactList.ItemsSource = contacts;
         }
     }
 }
