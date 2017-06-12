@@ -22,7 +22,7 @@ namespace ContactManager.Pages
 
         public ContactDetails(Contact contact, bool isEditable)
         {
-            _contactRepository = new StaticContactRepository();
+            _contactRepository = new ContactDatabase();
             InitializeComponent();
             _contact = contact;
             _isEditable = isEditable;

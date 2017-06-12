@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using ContactManager.Models;
 using ContactManager.Services;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 
 namespace ContactManager.Pages
 {
@@ -13,7 +10,7 @@ namespace ContactManager.Pages
         private readonly IContactRepository _contactRepository;
         public Contacts()
         {
-            _contactRepository = new StaticContactRepository();
+            _contactRepository = new ContactDatabase();
             InitializeComponent();
         }
 
