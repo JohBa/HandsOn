@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ContactManagerPCL"
+             x:Class="ContactManagerPCL.Pages.ContactList"
+             Appearing="OnContactsAppearing"
+             Title="Contact details">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Order="Primary" Clicked="AddClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="ContactsListView" ItemTapped="ContactsListView_OnItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding FullName}" Detail="{Binding TelephoneNumber}"></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+        
+</ContentPage>
