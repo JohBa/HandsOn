@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:ContactManagerPCL"
              x:Class="ContactManagerPCL.Pages.ContactList"
              Appearing="OnContactsAppearing"
-             Title="Contact details">
+             Title="Contacts">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Order="Primary" Clicked="AddClicked" />
     </ContentPage.ToolbarItems>
